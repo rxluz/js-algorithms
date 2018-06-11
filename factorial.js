@@ -1,4 +1,4 @@
-function factorial(num, currentVal) {
+function factorial1(num, currentVal) {
   if (num === 1) {
     return currentVal;
   }
@@ -6,6 +6,6 @@ function factorial(num, currentVal) {
   return factorial(num - 1, (currentVal || num) * --num);
 }
 
-const fact = num => (num === 1 ? num : num * fact(num - 1));
+const factorial2 = num => (num === 1 ? num : num * factorial2(num - 1));
 
-console.log(fact(4));
+console.log(factorial2(4));
